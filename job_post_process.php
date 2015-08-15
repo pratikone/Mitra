@@ -1,68 +1,44 @@
-<html>
-
-<head>
-	<title>MITRA - A friend who helps you , in jobs and more</title>
-	
-</head>
-
-<body>
-
 <?php
 
 
 
-echo "We wil we will rock you";
+function postJobtoDb( $array){
 
+	$fields = "";
+	$Values = "";
+    foreach ($array as $key => $value) { 
+        $fields .= $key . ",";   
+        $Values .= "'".$value . "'" . ",";    //'Values', is the output
+    }
 
-function getJobCard( $id, $display ){
+    $fields = substr( $fields, strlen($fields)-1 ); //remove the last comma
+    $Values = substr( $Values, strlen($Values)-1 ); //remove the last comma
 
-	//database call code
+	$sql = "INSERT INTO DBNAME ($fields)  VALUES ($Values)";
 
-	$jobTitle = "";
-	$jobDescription = "";
-
-	if($display)
-		displayJobCard();
-
-}
-
-
-function  getNextJobCards( $count){
-
-	if( $count <0)
-		echo "error";
-
-	for( $i=0; $i < $count ; $i++ ){
-		//fetch 
-		//db call
-
-		getJobCard( 0, true );
-
+	if ($dbObj->query($sql) === TRUE) {
+    echo "New record created successfully";
+	} else {
+    	die("Error: " . $sql . "<br>" . $dbObj->error);
 	}
 
-}
-
-
-function postJobtoDb(){
-
-
-	//get or post 
-
-
-	//db call api
-
-
-
+$dbObj->close();
 
 }
 
-function dbJelCode(){
-
-	$dbObj = " " ; //change it to something logical
 
 
-	return $dbObj;  //retunr db code
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -70,9 +46,3 @@ function dbJelCode(){
 
 
 ?>
-
-
-</body>
-
-
-</html>

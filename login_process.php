@@ -29,9 +29,8 @@ function login(){
 	}
 
 	//db call
-	$db = getDBObject();
-	$sql = "SELECT * FROM table_name WHERE NUMBER=$user AND PASSWORD=$password";
-	$result = $db->query($sql);
+	$sql = "SELECT * FROM table_name WHERE username='".$mysqli->mysqli_real_escape_string($user)."' AND password='".$mysqli->mysqli_real_escape_string($password)."'";
+	$result = $mysqli->query(   $sql);
 	if ($result->num_rows > 1 ) 
 		die("Multiple db entries by this number");
 	if ($result->num_rows < 1 ) 
@@ -42,8 +41,18 @@ function login(){
     // $row = $result->fetch_assoc());
     // echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
 
-    
-	createSession();
+    //if some session already exists
+    if (session_status() <> PHP_SESSION_NONE) {
+ 	    // remove all session variables
+		session_unset(); 
+
+		// destroy the session 
+		session_destroy(); 
+	}
+
+
+	session_start();
+
 }
 
 
