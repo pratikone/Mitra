@@ -1,24 +1,28 @@
 function loadContent(){
 	for(i = 1; i< jobs.length; i++){
 		var newDiv = document.createElement("div");
-		var backgroundClass = "bg";
+		//var backgroundClass = "bg";
 		newDiv.id = "div"+i;
-		newDiv.innerHTML = "<blockquote><p>" +
-		Job : jobs[i].job_name + "<br/>" +
-		Description : jobs[i].job_desc + " <br/>" +
-		Address : jobs[i].job_address + "<br/>" +
-		jobs[i].job_min_cost + "<br/>" +
-		jobs[i].job_max_cost + "<br/>" +
-		jobs[i].job_people_req + "<br/>" +
-		jobs[i].job_expiry_time + "<br/>" +
-		jobs[i].language_name + "<br/>" +
-		jobs[i].name + "<br/>" +
-		jobs[i].phone + "<br/>" +
-		jobs[i].email + "<br/>" +
-		jobs[i].address + "<br/>" + 
-		jobs[i].job_type_name + " </p></blockquote>";
+		newDiv.innerHTML = ""+
+		"<div class='panel panel-primary'> "+
+		"<div class='panel-body'>		   "+
+		"Job : " + jobs[i].job_name + "<br/> "+ 
+		"</div>	<div class='panel-footer'>" + 
+		"Description : " + jobs[i].job_desc + " <br/>" +
+		"Address : " + jobs[i].job_address + "<br/>" +
+		"Min cost : " + jobs[i].job_min_cost + "<br/>" +
+		"Max cost : " + jobs[i].job_max_cost + "<br/>" +
+		"Job requirement : " +jobs[i].job_people_req + "<br/>" +
+		"Expiry date : " + jobs[i].job_expiry_time + "<br/>" +
+		"Language requirement : " + jobs[i].language_name + "<br/>" +
+		"Posted by : " + jobs[i].name + "<br/>" +
+		"Phone : " + jobs[i].phone + "<br/>" +
+		"Email : " + jobs[i].email + "<br/>" +
+		"Job Address : " + jobs[i].address + "<br/>" + 
+		"Category : " + jobs[i].job_type_name + 
+		"</div> </div>" ;
 		$("#content").append(newDiv);
-		$("#content div:last-child").addClass("bg ");
+		//$("#content div:last-child").addClass("bg ");
 	}
 };
 

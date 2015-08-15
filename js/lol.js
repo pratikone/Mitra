@@ -125,3 +125,24 @@ var jobs =
 			"job_type_name":"Agriculture"
 		}
 	];
+	
+$.get( 
+"get_jobs_process.php" ,
+{format: "json"}
+
+).done(function( data ) {
+    console.log( "Data Loaded: " + data );
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
