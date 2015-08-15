@@ -116,115 +116,38 @@
 		<br/>
 		<br/>
 		<br/>
-		<div id="nav-drawer" class="drawer">
-			<br/>
-			<br/>
-			<br/>
-			<div id="qod" onclick="topic('inspirational');" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Quote of the day
-			</div>
-			<div id="random" onclick="topic('sarcastic');" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Random
-			</div>
-			<div id="business" onclick="topic('life');" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Business
-			</div>
-			<div id="bhagwad_gita" onclick="topic('success');" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Bhagwad Gita
-			</div>
-			<div id="buddha" onclick="topic('artificial_intelligence');" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Buddha
-			</div>
-			<div id="chanakya" onclick="topic(qod);" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Chanakya
-			</div>
-			<div id="funny" onclick="topic(qod);" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Funny Quotes
-			</div>
-			<div id="humor" onclick="topic(qod);" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Humor
-			</div>
-			<div id="inspirational" onclick="topic(qod);" class="drawer-options">		
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Inspirational
-			</div>
-			<div id="life" onclick="topic(qod);" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Life
-			</div>
-			<div id="love" onclick="topic(qod);" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Love
-			</div>
-			<div id="music" onclick="topic(qod);" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Music
-			</div>
-			<div id="movies" onclick="topic(qod);" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Movies
-			</div>
-			<div id="poetry" onclick="topic(qod);" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Poetry
-			</div>
-			<div id="sarcastic" onclick="topic(qod);" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Sarcastic
-			</div>
-			<div id="success" onclick="topic(qod);" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Success
-			</div>
-			<div id="women" onclick="topic(qod);" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Women
-			</div>
-			<div id="wisdom" onclick="topic(qod);" class="drawer-options">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				Wisdom
-			</div>
-		</div>
 		<div class="container" id="content">
 		<center><h3>Register</h3></center>
 	    <form action="registration_process.php" method="post">
 			<div class="form-group">
 				<label for="username">User Name</label>
-				<input type="text" class="form-control" id="username" placeholder="Enter User Name">
+				<input type="text" class="form-control" id="username" name="username"  placeholder="Enter User Name">
 			</div>
 			<div class="form-group">
 				<label for="password">Password</label>
-				<input type="password" class="form-control" id="password" placeholder="Enter Password">
+				<input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
 			</div>
 			<div class="form-group">
 				<label for="confirmPassword">Confirm Password</label>
-				<input type="password" class="form-control" id="conformPassword" placeholder="Confirm Password">
+				<input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
 			</div>
 			<div class="form-group">
 				<label for="name">Name</label>
-				<input type="text" class="form-control" id="name" placeholder="Enter Name">
+				<input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
 			</div>
 			<div class="form-group">
 				<label for="phone">Phone Number</label>
-				<input type="text" class="form-control" id="phone" placeholder="Enter Mobile Number">
+				<input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Mobile Number">
 			</div>
 			<div class="form-group">
 				<label for="email">Email</label>
-				<input type="email" class="form-control" id="email" placeholder="Enter Email Address">
+				<input type="email" class="form-control" id="email" name="email" placeholder="Enter Email Address">
 			</div>
 			<div class="form-group">
 				<label for="address">Address</label>
-				<textarea class="form-control" rows="4" id="address" placeholder="Enter Address"></textarea>
+				<textarea class="form-control" rows="4" id="address" name="address" placeholder="Enter Address"></textarea>
 			</div>
-			<button type="submit" class="btn btn-primary">Register</button>
+			<input type="submit" class="btn btn-primary" value="Submit"></input>
 			</form>
 		</div>
 		<!--Content ends here-->
