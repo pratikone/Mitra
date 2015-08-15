@@ -16,7 +16,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
-
   </head>
 
   <body>
@@ -58,7 +57,8 @@
             <p class="lead">Your one stop friend to all the employment problems.</p>
             <p class="lead">
 				<a href="#" class="btn btn-lg btn-primary">Take a tour</a>
-				<a href="#" class="btn btn-lg btn-primary">Job listings</a>
+				<a href="registration.php" class="btn btn-lg btn-primary">Register</a>
+				<a href="default.php" class="btn btn-lg btn-primary">Job listings</a>
             </p>
          </div>
 		<div class="mastfoot">
