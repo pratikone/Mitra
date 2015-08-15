@@ -3,20 +3,12 @@
 	$user = $_POST["username"];
 	$password = $_POST["password"];
 
-	$sql = "SELECT * FROM tbl_user WHERE user_name='".$mysqli->real_escape_string($user)."' AND password='".$mysqli->real_escape_string($password)."'";
+	$sql = "SELECT * FROM tbl_user WHERE user_name='".$mysqli->real_escape_string($user)."' AND password='".md5($mysqli->real_escape_string($password))."'";
 
 	$result = $mysqli->query($sql);
 
 	if($result->num_rows != 1){
-		header("location:index.php");
-	}
-    //if some session already exists
-    if (session_status() <> PHP_SESSION_NONE) {
- 	    // remove all session variables
-		session_unset(); 
-
-		// destroy the session 
-		session_destroy(); 
+		header("location:index.php?error=1");
 	}
 
 	session_start();
@@ -25,5 +17,7 @@
 
 	$_SESSION['username'] = $row['user_name'];
 	$_SESSION['userid'] = $row['user_id'];
-	header("location:default.php")
+
+	echo $_SESSION['userid'];
+	//header("location:default.php")
 ?>
