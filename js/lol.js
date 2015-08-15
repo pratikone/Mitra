@@ -1,3 +1,7 @@
+var jobs = [];
+
+
+/*
 var jobs =
 	[
 		{
@@ -125,13 +129,16 @@ var jobs =
 			"job_type_name":"Agriculture"
 		}
 	];
-	
+*/	
 $.get( 
 "get_jobs_process.php" ,
 {format: "json"}
 
 ).done(function( data ) {
-    console.log( "Data Loaded: " + data );
+    console.log( data );
+	jobs = JSON.parse(data);
+	//calling from data_manipulation
+	loadContent();
   });
 
 

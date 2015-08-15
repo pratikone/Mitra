@@ -1,6 +1,6 @@
 <?php
 require_once("db_connection.php");
-$pricemin = $pricemax = $jobcategory = $startdate = $startindex = null;
+$locationid = $pricemin = $pricemax = $jobcategory = $startdate = $startindex = null;
 if(isset($_GET['locationid'])) {
 	$locationid = $mysqli->real_escape_string($_GET['locationid']);
 }
@@ -46,7 +46,7 @@ if(isset($startdate) && strlen($startdate) > 0){
 if(isset($startindex) && strlen($startindex) == 0){
 	$startindex = 0;
 }
-$fetch_job_query = $fetch_job_query." LIMIT ".$startindex.", ".$blocksize;
+$fetch_job_query = $fetch_job_query." LIMIT ".$startindex." ".$blocksize;
 
 $result = $mysqli->query($fetch_job_query);
 $job_process = array();

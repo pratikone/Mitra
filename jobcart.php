@@ -123,8 +123,8 @@
 			window.jQuery || document.write('<script 			src="../../assets/js/vendor/jquery.min.js"><\/script>')
 		</script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		
-		<script src="js/lol.js"></script>
 		<script src="js/data_manipulation.js"></script>
+		<script src="js/lol.js"></script>
+		
 	</body>
 </html>

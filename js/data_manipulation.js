@@ -1,5 +1,5 @@
 function loadContent(){
-	for(i = 1; i< jobs.length; i++){
+	for(i = 0; i< jobs.length; i++){
 		var newDiv = document.createElement("div");
 		//var backgroundClass = "bg";
 		newDiv.id = "div"+i;
@@ -25,5 +25,3 @@ function loadContent(){
 		//$("#content div:last-child").addClass("bg ");
 	}
 };
-
-loadContent();
