@@ -108,15 +108,6 @@ body
 	padding-right:20px;
 	font:20px;
 	text-align:justify;
-}
-
-.bg0{
-	/*pink*/
-	background: #EC407A !important;
-	color: rgba(255, 255, 255, 0.87) !important;
-}
-
-.bg1{
 	/*deep purple*/
 	background: #673AB7 !important;
 	color: rgba(255, 255, 255, 0.87) !important;

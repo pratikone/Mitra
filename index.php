@@ -31,7 +31,8 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"><font family="Trebuchet MS, Helvetica, sans-serif;" size="18px" color="#FFF">mitra</font></a>
+					<a class="navbar-brand" href="#"><font color="#FFF" size="6px"> <span class="glyphicon glyphicon-user" aria-hidden="true"> </span>
+					<span class="glyphicon glyphicon-user" style="margin-left: -13px; zoom:0.6 "  aria-hidden="true"></span></font color="#FFF"><font color = "#FFF" size="10px"> mitra</font></a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<form class="navbar-form navbar-right" action="login_process.php" method="POST">

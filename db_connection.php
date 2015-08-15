@@ -1,7 +1,7 @@
 <?php
 $dbserver = "localhost";  
-$dbuser = "mitra_user";
-$dbpassword = "mitra";
+$dbuser = "root";
+$dbpassword = "";
 $mysqli = new mysqli($dbserver, $dbuser, $dbpassword); 
 $mysqli->select_db("mitra_jobs");
 // Check connection
