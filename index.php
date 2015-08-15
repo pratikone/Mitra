@@ -35,15 +35,15 @@
 					<a class="navbar-brand" href="#"><font family="Trebuchet MS, Helvetica, sans-serif;" size="18px" color="#FFF">mitra</font></a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
-					<form class="navbar-form navbar-right">
+					<form class="navbar-form navbar-right" action="login_process.php" method="POST">
 						<div class="form-group">
-						  <input type="text" placeholder="Email" class="form-control">
+							<input type="text" placeholder="Username" name="username" class="form-control">
 						</div>
 						<div class="form-group">
-						  <input type="password" placeholder="Password" class="form-control">
+							<input type="password" placeholder="Password" name="password" class="form-control">
 						</div>
 						<div class="form-group">
-							<button type="submit" class="btn btn-warning"><b>Sign in</b></button>
+							<input type="submit" class="btn btn-warning" value="Sign In" />
 						</div>
 						&nbsp;
 					</form>
