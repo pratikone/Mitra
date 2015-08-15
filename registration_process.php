@@ -2,6 +2,8 @@
 
 require_once("db_connection.php");
 
+print_r($_POST);
+
 $username = $mysqli->real_escape_string($_POST['username']);
 $password = $mysqli->real_escape_string($_POST['password']);
 $name = $mysqli->real_escape_string($_POST['name']);
