@@ -7,7 +7,7 @@ include("header.php");
 		<br/>
 		<br/>
 		<div class="container" id="content">
-		<center><h3>Job Postings</h3></center>
+		<center><h3><?php echo translateToLocal($lncode, 'Job Postings'); ?></h3></center>
 	  
 		</div> 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

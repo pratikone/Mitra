@@ -16,6 +16,11 @@
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
+			<?php
+		include("translate.php");
+		?>
+		
+	
   </head>
 
   <body>
@@ -69,21 +74,18 @@
 		<br/>
 		<div class="inner cover">
             <h1 class="cover-heading">mitra</h1>
-            <p class="lead">Your one stop friend to all the employment problems.</p>
+            <p class="lead"><?php echo translateToLocal($lncode, 'Your one stop friend to all the employment problems.'); ?></p>
             <p class="lead">
-				<a href="#" class="btn btn-lg btn-primary">Take a tour</a>
-				<a href="registration.php" class="btn btn-lg btn-primary">Register</a>
-				<a href="jobcart.php" class="btn btn-lg btn-primary">Job listings</a>
+				<a href="#" class="btn btn-lg btn-primary"><?php echo translateToLocal($lncode, 'Take a tour'); ?></a>
+				<a href="registration.php" class="btn btn-lg btn-primary"><?php echo translateToLocal($lncode, 'Register'); ?></a>
+				<a href="jobcart.php" class="btn btn-lg btn-primary"><?php echo translateToLocal($lncode, 'Job listings');?></a>
             </p>
          </div>
 		<div class="mastfoot">
 			<div class="inner">    
 				<center>
 					<a href="#">Home</a> |  
-					<a href="#">Login</a> | 
-					<a href="#">Signup</a> | 
 					<a href="#">FAQs</a> | 
-					<a href="#">FAQs</a> |
 					<a href="#">Disclaimer</a> | 
 					<a href="#">Contact</a>
 					<br/><br/>

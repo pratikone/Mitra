@@ -7,6 +7,12 @@
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 		<link type="text/css" rel="stylesheet" href="css/stylesheet.css" />
 		<title>Mitra</title>
+		<?php
+		include("translate.php");
+		$lncode='en';
+		//$lncode='kn'; //kannada uncomment for translation
+		?>
+		
 	<head>
 	<body>
 		<!--Header starts here-->
