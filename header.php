@@ -106,7 +106,7 @@
 					</div>
 				</form>
 				 <ul class="nav navbar-nav navbar-right">
-				  <li><a href="#"><span class="glyphicon glyphicon-off"></span>  Logout</a></li>
+				  <li><a href="logout.php"><span class="glyphicon glyphicon-off"></span>  Logout</a></li>
 				</ul>
 				
 			</div><!-- /.navbar-collapse -->

@@ -35,18 +35,32 @@
 					<span class="glyphicon glyphicon-user" style="margin-left: -13px; zoom:0.6 "  aria-hidden="true"></span></font color="#FFF"><font color = "#FFF" size="10px"> mitra</font></a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
-					<form class="navbar-form navbar-right" action="login_process.php" method="POST">
-						<div class="form-group">
-							<input type="text" placeholder="Username" name="username" class="form-control">
+				<?php
+				if (session_status() == PHP_SESSION_ACTIVE ) {
+					echo "UP";
+					echo " <ul class='nav navbar-nav navbar-right'>
+				  <li><a href='logout.php'><span class='glyphicon glyphicon-off'></span>  Logout</a></li>
+					</ul> ";
+				}
+				else{
+				echo "DOWN";
+					echo "<form class='navbar-form navbar-right' action='login_process.php' method='POST'>
+						<div class='form-group'>
+							<input type='text' placeholder='Username' name='username' class='form-control'>
 						</div>
-						<div class="form-group">
-							<input type="password" placeholder="Password" name="password" class="form-control">
+						<div class='form-group'>
+							<input type='password' placeholder='Password' name='password' class='form-control'>
 						</div>
-						<div class="form-group">
-							<input type="submit" class="btn btn-warning" value="Sign In" />
+						<div class='form-group'>
+							<input type='submit' class='btn btn-warning' value='Sign In' />
 						</div>
 						&nbsp;
 					</form>
+					" ;
+				}
+				
+					
+					?>
 				</div><!--/.navbar-collapse -->
 			</div>
 		</nav>
@@ -59,7 +73,7 @@
             <p class="lead">
 				<a href="#" class="btn btn-lg btn-primary">Take a tour</a>
 				<a href="registration.php" class="btn btn-lg btn-primary">Register</a>
-				<a href="default.php" class="btn btn-lg btn-primary">Job listings</a>
+				<a href="jobcart.php" class="btn btn-lg btn-primary">Job listings</a>
             </p>
          </div>
 		<div class="mastfoot">
