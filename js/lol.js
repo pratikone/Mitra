@@ -135,7 +135,7 @@ $.get(
 {format: "json"}
 
 ).done(function( data ) {
-    console.log( data );
+    //console.log( data );
 	jobs = JSON.parse(data);
 	//calling from data_manipulation
 	loadContent();
