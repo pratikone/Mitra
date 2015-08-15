@@ -1,9 +1,8 @@
 <?php
 session_start();
-echo $_SESSION['userid'];
-echo "This is a test";
+//echo $_SESSION['userid'];
 require_once("db_connection.php");
-$location_query = "SELECT * FROM `tbl_job_locations`";
+$location_query = "SELECT * FROM `tbl_job_locations` WHERE location_pincode BETWEEN '560000' AND '570000'";
 $location_result = $mysqli->query($location_query);
 $job_type_query = "SELECT * FROM tbl_job_types";
 $job_type_result = $mysqli->query($job_type_query);
@@ -176,7 +175,7 @@ $language_result = $mysqli->query($language_query);
 			</div>
 			<div class="form-group">
 				<label for="peopleRequired">Number of people required</label>
-				<input type="number" class="form-control" id="peopleRequired" name="peopleRequired" placeholder="Minimum Price">
+				<input type="number" class="form-control" id="peopleRequired" name="peopleRequired" placeholder="Number of people required">
 			</div>
 			<div class="form-group">
 				<label for="language">Language requirement</label>

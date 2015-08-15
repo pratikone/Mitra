@@ -26,8 +26,12 @@ if(isset($_GET['startfrom'])) {
 }
 
 $blocksize = 10;
-
+/*
 $fetch_job_query = "SELECT * FROM tbl_jobs, tbl_languages, tbl_job_locations, tbl_user_profile, tbl_job_types WHERE tbl_jobs.user_id = tbl_user_profile.user_id AND tbl_jobs.job_location = tbl_job_locations.location_id AND tbl_job_types.job_type_id = tbl_jobs.job_type AND tbl_languages.language_id = tbl_jobs.language_id AND tbl_jobs.start_date >= CURRENT_DATE";
+*/
+$fetch_job_query = "SELECT * FROM tbl_jobs, tbl_languages, tbl_job_locations, tbl_user_profile, tbl_job_types WHERE tbl_jobs.job_location = tbl_job_locations.location_id AND tbl_job_types.job_type_id = tbl_jobs.job_type AND tbl_languages.language_id = tbl_jobs.language_id AND tbl_jobs.start_date >= CURRENT_DATE";
+
+
 if(isset($locationid) && strlen($locationid) > 0) {
 	$fetch_job_query = $fetch_job_query." AND tbl_job_locations.location_pincode = ".$locationid;
 }
