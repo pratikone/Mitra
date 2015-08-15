@@ -149,7 +149,7 @@
 			</div>
 			<input type="submit" class="btn btn-primary" value="Submit"></input>
 			</form>
-		</div>
+		</div> 
 		<!--Content ends here-->
 		<script type="text/javascript">
 			window.jQuery || document.write('<script 			src="../../assets/js/vendor/jquery.min.js"><\/script>')
