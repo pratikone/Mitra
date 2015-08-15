@@ -5,10 +5,7 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link type="text/css" rel="stylesheet" href="css/stylesheet.css" />
-		<script type="text/javascript" src="js/jquery.min.js" id="jquery"></script>
-		<script type="text/javascript" src="js/jquery-ui.min.js" id="jquery"></script>
-		<script type="text/javascript" src="js/jquery.slimscroll.min.js" id="jquery"></script>
-		<script type="text/javascript" src="js/lol.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 		<title>Mitra</title>
 	<head>
 	<body>
@@ -116,14 +113,76 @@
 		<br/>
 		<br/>
 		<br/>
-		<div id="content" style="overflow:hidden; margin-left:10px; margin-right:10px;">
+		<div class="container" id="content">
+		<center><h3>Post Job</h3></center>
+	    <form action="registration_process.php" method="post">
+			<div class="form-group">
+				<label for="jobTitle">Job Title</label>
+				<input type="text" class="form-control" id="jobTitle" name="jobTitle" placeholder="Enter Job Title">
+			</div>
+			<div class="form-group">
+				<label for="jobDescription">Job Description</label>
+				<textarea class="form-control" rows="5" id="jobDescription" name="jobDesciption" placeholder="Enter Job Description"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="price">Price (Money)</label>
+				<div class="row">
+					<div class="col-md-3">
+						<input type="number" class="form-control" id="minPrice" name ="minPrice" placeholder="Minimum Price">&nbsp;
+					</div>
+					<div class="col-md-1">
+						to
+					 </div>
+					<div class="col-md-3">
+						<input type="number" class="form-control" id="maxPrice" name="maxPrice" placeholder="Maximum Price">
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="startDate">Start Date</label>
+				<input type="text" class="form-control" id="startDatepicker" name="startDatePicker"></input>
+			</div>
+			<div class="form-group">
+				<label for="endDate">End Date</label>
+				<input type="text" class="form-control" id="endDatePicker" name="endDatePicker"></input>
+			</div>
+			<!--### Selector js code needed-->			
+			<div class="form-group">
+				<label for="category">Job category</label>
+				<input type="selector" class="form-control" id="category" placeholder="Select category">
+			</div>
+			<div class="form-group">
+				<label for="peopleRequired">Number of people required</label>
+				<input type="number" class="form-control" id="peopleRequired" name="peopleRequired" placeholder="Minimum Price">
+			</div>
+			<div class="form-group">
+				<label for="language">Language requirement</label>
+				<input type="text" class="form-control" id="language" name="language" placeholder="Select Language">
+			</div>
+			<div class="checkbox">
+				<label for="instant"><input type="checkbox" value="" id="instant" name="instant"><b>Instant</b></label>
+			</div>
+			<br/>
+			<input type="submit" class="btn btn-primary" value="submit"></input>
+			</form>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!--Content ends here-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script type="text/javascript">
-			window.jQuery || document.write('<script 			src="../../assets/js/vendor/jquery.min.js"><\/script>')
+			window.jQuery || document.write('<script 			src="../../assets/js/vendor/jquery.min.js"><\/script>');
 		</script>
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			$(function () {
+                $('#startDatePicker').datepicker({
+					dateFormat : 'dd/mm/yy'
+				});
+				$('#endDatePicker').datepicker({
+					dateFormat : 'dd/mm/yy'
+				});
+            });
+		</script>
 	</body>
 </html>
