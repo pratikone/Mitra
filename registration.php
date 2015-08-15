@@ -4,11 +4,6 @@
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link type="text/css" rel="stylesheet" href="css/stylesheet.css" />
-		<script type="text/javascript" src="js/jquery.min.js" id="jquery"></script>
-		<script type="text/javascript" src="js/jquery-ui.min.js" id="jquery"></script>
-		<script type="text/javascript" src="js/jquery.slimscroll.min.js" id="jquery"></script>
-		<script type="text/javascript" src="js/lol.js"></script>
 		<title>Mitra</title>
 	<head>
 	<body>
