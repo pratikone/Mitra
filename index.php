@@ -11,7 +11,7 @@
 
 
 
-echo "We wil we will rock you"
+echo "We wil we will rock you";
 
 
 function getJobCard( $id, $display ){
@@ -58,10 +58,10 @@ function postJobtoDb(){
 
 function dbJelCode(){
 
-	dbObj = "" //change it to something logical
+	$dbObj = " " ; //change it to something logical
 
 
-	return dbObj;
+	return $dbObj;  //retunr db code
 }
 
 
