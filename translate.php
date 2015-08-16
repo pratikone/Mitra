@@ -1,7 +1,6 @@
 <?php 
 require 'vendor/autoload.php';
 use Stichoza\GoogleTranslate\TranslateClient;
-$lncode = "en";
 if(isset($_SESSION['lang'])){
 	$lncode = $_SESSION['lang'];
 }

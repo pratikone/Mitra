@@ -71,6 +71,12 @@
 							<li class="divider"></li>
 							<li><a href='setlang.php?lang=kn'> Kannada</a></li>
 							<li class="divider"></li>
+							<li><a href='setlang.php?lang=bn'> Bengali</a></li>
+							<li class="divider"></li>
+							<li><a href='setlang.php?lang=ml'> Malayalam</a></li>
+							<li class="divider"></li>
+							<li><a href='setlang.php?lang=ur'> Urdu</a></li>
+							<li class="divider"></li>
 						</ul>
 					</li>
 					 <li><a href="viewjobs.php"><span class="glyphicon glyphicon-off"></span>  <?php echo translateToLocal($lncode, "View Jobs"); ?></a></li>
