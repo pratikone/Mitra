@@ -73,16 +73,8 @@
 							<li class="divider"></li>
 						</ul>
 					</li>
+					 <li><a href="viewjobs.php"><span class="glyphicon glyphicon-off"></span>  <?php echo translateToLocal($lncode, "View Jobs"); ?></a></li>
 				</ul>
-				<form class="navbar-form navbar-left col-sm-12 col-xs-12" role="search">
-					<div class="row">
-						<div class="col-xs-9 col-sm-9">
-							<input type="text" id='#search_web' href='javascript:;' class="form-control" placeholder="Search for jobs..."></input>
-						</div>
-						<button type="submit" onclick='search_clicked();' href='javascript:;' class="btn btn-default col-xs-3 col-sm-3"><?php echo translateToLocal($lncode, "Search"); ?></button>
-						
-					</div>
-				</form>
 				<ul class="nav navbar-nav" style="margin-left:20px">
 					<li>
 					<a href='instant_jobs.php' class="btn btn-default btn-danger"><?php echo translateToLocal($lncode, "Instant Jobs"); ?></a>
