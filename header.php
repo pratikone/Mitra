@@ -41,6 +41,7 @@
 				</button>
 				<a class="navbar-brand" href="index.php" style="padding-left:5px;margin-left:0px;"><font color="white"><?php echo translateToLocal($lncode, "mitra"); ?></font></a>
 			</div>
+			
 			<div id="search-option" class="hidden-sm hidden-md hidden-lg">
 				<div class="collapse navbar-collapse no-border" id="search-bar" style="background-color:white">
 					<form class="navbar-form navbar-left col-sm-12 col-xs-12" role="search">
@@ -79,14 +80,15 @@
 							<li class="divider"></li>
 						</ul>
 					</li>
-					 <li><a href="viewjobs.php"><span class="glyphicon glyphicon-off"></span>  <?php echo translateToLocal($lncode, "View Jobs"); ?></a></li>
-				</ul>
-				<ul class="nav navbar-nav" style="margin-left:20px">
+					 <li><a href="viewjobs.php"><span class="glyphicon glyphicon-th-list"></span>  <?php echo translateToLocal($lncode, "View Jobs"); ?></a></li>
 					<li>
-					<a href='instant_jobs.php' class="btn btn-default btn-danger"><?php echo translateToLocal($lncode, "Instant Jobs"); ?></a>
+					<a href='instant_jobs.php'><span class="glyphicon glyphicon-flash"></span> <?php echo translateToLocal($lncode, "Instant Jobs"); ?></a>
 					</li>
 					<li>
-					<a href='jobcart.php' class="btn btn-default btn-primary" style="margin-left:20px;">&nbsp;&nbsp; <?php echo translateToLocal($lncode, "All Jobs"); ?> &nbsp;&nbsp;</a>
+					<a href='jobcart.php'><span class="glyphicon glyphicon-align-justify"></span> <?php echo translateToLocal($lncode, "All Jobs"); ?> &nbsp;&nbsp;</a>
+					</li>
+					<li>
+					<a href='postjob.php'><span class="glyphicon glyphicon-plus-sign"></span> <?php echo translateToLocal($lncode, "Add Jobs"); ?> &nbsp;&nbsp;</a>
 					</li>
 				</ul>
 				 <ul class="nav navbar-nav navbar-right">
