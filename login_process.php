@@ -11,9 +11,6 @@
 		
 		header("location:error.php");
 	}
-	if (session_status() == PHP_SESSION_ACTIVE ) {
-	session_destroy(); //destroy old session
-	}
 	
 	session_start();
 	
@@ -23,7 +20,5 @@
 	$_SESSION['userid'] = $row['user_id'];
 	$_SESSION['HTTP_HOST'] = "index.php";
 
-	echo $_SESSION['userid'];
 	header("location:index.php");
-	//header('Location:http://localhost/mitra/'.$_SESSION['HTTP_HOST']);
 ?>

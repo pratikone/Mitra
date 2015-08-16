@@ -1,13 +1,13 @@
 <?php
 
 session_start();
-$user_id = $_SESSION['userid'];
 
 if(!isset($user_id) || strlen($user_id) <= 0){
 	header("location:index.php?error=20");
 }
 
-echo "$user_id";
+$user_id = $_SESSION['userid'];
+
 require_once("db_connection.php");
 
 $job_title = $mysqli->real_escape_string($_POST['jobTitle']);

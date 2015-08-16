@@ -1,8 +1,16 @@
+<?php
+session_start();
+$lncode = "en";
+if(isset($_SESSION['lang'])){
+	$lncode = $_SESSION['lang'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
@@ -41,14 +49,12 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 				<?php
-				if (session_status() == PHP_SESSION_ACTIVE ) {
-					echo "UP";
+				if (isset($_SESSION['userid'])) {
 					echo " <ul class='nav navbar-nav navbar-right'>
-				  <li><a href='logout.php'><span class='glyphicon glyphicon-off'></span>  Logout</a></li>
+				  <li><a href='logout.php' class='btn btn-danger'><span class='glyphicon glyphicon-off'></span>  Logout</a></li>
 					</ul> ";
 				}
 				else{
-				echo "DOWN";
 					echo "<form class='navbar-form navbar-right' action='login_process.php' method='POST'>
 						<div class='form-group'>
 							<input type='text' placeholder='Username' name='username' class='form-control'>

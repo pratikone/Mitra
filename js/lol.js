@@ -137,6 +137,7 @@ $.get(
 ).done(function( data ) {
     //console.log( data );
 	jobs = JSON.parse(data);
+	$("#loading-img").hide();
 	//calling from data_manipulation
 	loadContent();
   });

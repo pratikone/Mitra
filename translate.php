@@ -1,18 +1,10 @@
-
-<html>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-</html> 
-
 <?php 
 require 'vendor/autoload.php';
-
 use Stichoza\GoogleTranslate\TranslateClient;
-
-//$lncode='en';
-$lncode='kn'; //kannada uncomment for translation
-
+$lncode = "en";
+if(isset($_SESSION['lang'])){
+	$lncode = $_SESSION['lang'];
+}
 function translateToLocal( $languagecode, $text ){
 
 	if($languagecode == 'en') //no conversion in case of english to english

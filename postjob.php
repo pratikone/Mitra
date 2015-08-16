@@ -1,6 +1,5 @@
 <?php
 session_start();
-//echo $_SESSION['userid'];
 require_once("db_connection.php");
 $location_query = "SELECT * FROM `tbl_job_locations` WHERE location_pincode BETWEEN '560000' AND '570000'";
 $location_result = $mysqli->query($location_query);
@@ -8,7 +7,6 @@ $job_type_query = "SELECT * FROM tbl_job_types";
 $job_type_result = $mysqli->query($job_type_query);
 $language_query = "SELECT * FROM tbl_languages";
 $language_result = $mysqli->query($language_query);
-
 include("header.php");
 ?>
 

@@ -2,6 +2,9 @@ function loadContent(){
 	console.log("Load Content called");
 	console.log(jobs);
 	for(i = 0; i< jobs.length; i++){
+		if(jobs[i].instant == 0){
+			continue;
+		}
 		var newDiv = document.createElement("div");
 		//var backgroundClass = "bg";
 		newDiv.id = "div"+i;
