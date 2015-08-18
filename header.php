@@ -80,7 +80,7 @@
 							<li class="divider"></li>
 						</ul>
 					</li>
-					 <li><a href="viewjobs.php"><span class="glyphicon glyphicon-th-list"></span>  <?php echo translateToLocal($lncode, "View Jobs"); ?></a></li>
+					 <li><a href="viewjobs.php"><span class="glyphicon glyphicon-th-list"></span>  <?php echo translateToLocal($lncode, "View Jobs Responses"); ?></a></li>
 					<li>
 					<a href='instant_jobs.php'><span class="glyphicon glyphicon-flash"></span> <?php echo translateToLocal($lncode, "Instant Jobs"); ?></a>
 					</li>
